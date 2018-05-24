@@ -1,0 +1,12 @@
+<!--components/products/products.wxml-->
+<view class='prolist'>  
+  <view wx:for="{{proList}}" wx:key="{{index}}">
+    <view class='prolist-item'>
+      <view><image class='prolist-item-img' src='{{item.picUrl}}'></image></view>
+      <view class='prolist-item-content'>
+        <view class='item-name'>{{item.name}}</view>
+        <view>{{item.strategy}}</view>
+      </view>
+    </view>
+  </view>
+</view>

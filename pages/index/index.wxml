@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <!--
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class='userinfi-nickname'> {{userInfo.nickName}} </text>
+    </block>
+  </view>
+  -->
+  <view> 今日推荐 </view>
+  <view><image class='img-recommend' src='/images/cf-dalishi.png'></image></view>
+  <view class='btns-recommend'>
+    <button> 换一个 </button>
+    <button> 了解推荐 </button>
+  </view>
+  <text class='coffee-saying'>woshizhuangbiyuluwoshizhuangbiyuluwoshizhuangbiyuluwoshizhuangbiyuluwoshizhuangbiyulu</text>
+
+  <view class="bottom-container">
+    <view ><navigator url='/pages/content/content'> 搭配攻略 </navigator></view>
+    <view> 网友推荐 </view>
+  </view>
+
+</view>

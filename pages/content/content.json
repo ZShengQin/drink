@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "topnav": "/components/topnav/topnav",
+    "menu": "/components/menu/menu",
+    "products": "/components/products/products"
+  }
+}

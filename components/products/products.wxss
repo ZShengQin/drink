@@ -1,0 +1,28 @@
+/* components/products/products.wxss */
+.prolist{
+  position: absolute;
+  left: 180rpx;
+  display: flex;
+  flex-direction: column;
+}
+.prolist-item{
+  height: 200rpx;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.prolist-item-img{
+  width: 170rpx;
+  height: 170rpx;
+  display: inline-block;
+}
+.prolist-item-content{
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 30rpx;
+  padding-top: 15rpx;
+}
+.item-name{
+  color: #237804;
+  font-size: 35rpx;
+  font-weight: bold;
+}

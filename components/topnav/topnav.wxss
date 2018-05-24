@@ -1,0 +1,11 @@
+/* components/topnav/topnav.wxss */
+@import '/weui.wxss';
+
+.weui-navbar{
+  position: fixed;
+  background-color: #ffffff;
+}
+
+.page__bd{
+    padding-bottom: 0;
+}
