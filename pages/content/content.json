@@ -2,6 +2,7 @@
   "usingComponents": {
     "topnav": "/components/topnav/topnav",
     "menu": "/components/menu/menu",
-    "products": "/components/products/products"
+    "products": "/components/products/products",
+    "card": "/components/card/card"
   }
 }

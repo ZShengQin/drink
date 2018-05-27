@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/content/content",
+    "pages/about/about",
+    "pages/feedback/feedback",
     "pages/logs/logs"
     
   ],
@@ -10,5 +12,13 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#237804",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页", "iconPath": "", "selectedIconPath": ""},
+      { "pagePath": "pages/content/content", "text": "攻略"},
+      { "pagePath": "pages/about/about", "text": "关于"}
+    ]
   }
 }

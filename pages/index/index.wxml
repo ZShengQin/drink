@@ -15,10 +15,9 @@
     <button> 换一个 </button>
     <button> 了解推荐 </button>
   </view>
-  <text class='coffee-saying'>woshizhuangbiyuluwoshizhuangbiyuluwoshizhuangbiyuluwoshizhuangbiyuluwoshizhuangbiyulu</text>
+  <text class='coffee-saying'>woshizhuangbiyuluwoshizhuangbiyuluwoshizhuangbiyuluwoshi</text>
 
   <view class="bottom-container">
-    <view ><navigator url='/pages/content/content'> 搭配攻略 </navigator></view>
     <view> 网友推荐 </view>
   </view>
 

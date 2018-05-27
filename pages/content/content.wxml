@@ -6,8 +6,9 @@
   <view class="weui-tab__panel">
     <view class="">
       <menu menu-list="{{menuList[activeIndex]}}" bindchangeleftindex="changeLeftIndex" />
-      <products pro-list="{{proList}}" />
+      <products pro-list="{{proList}}" bindtapshowcard="tapShowCard" />
     </view>
   </view>
-  
+
+  <card isHidden='{{!isShowCard}}' content='{{cardContent}}' />
 </view>

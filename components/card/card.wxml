@@ -1,0 +1,8 @@
+<!--components/card/card.wxml-->
+<view class="card-mask" bindtap="hideCard" catchtouchmove="preventTouchMove" wx:if="{{!isHidden}}"></view>
+<view class="card-dialog" wx:if="{{!isHidden}}">
+  <view class="card-title"> {{content.name}} </view>
+  <view class="card-content">
+    <image src='{{content.picUrl}}'></image>
+  </view>
+</view>

@@ -22,7 +22,6 @@ Component({
    */
   methods: {
     changeIndex: function(e){
-      console.log(e.currentTarget.dataset.index)
       this.triggerEvent("changeleftindex", { activeLeftIndex: e.currentTarget.dataset.index })
     }
   }

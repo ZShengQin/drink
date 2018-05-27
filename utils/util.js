@@ -14,6 +14,25 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+/**
+ * 将index值转换为url中对应字符串
+ */
+const convertIndexToString = index => {
+  switch (index) {
+    case 0:
+      return '/coffee'
+    case 1:
+      return '/yidiandian'
+    case 2:
+      return '/heytea'
+    case 3:
+      return '/more'
+    default:
+      return '/coffee'
+  }
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  convertIndexToString: convertIndexToString
 }
