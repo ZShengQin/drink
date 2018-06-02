@@ -1,24 +1,39 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/content/content",
+    "pages/strategy/strategy",
     "pages/about/about",
     "pages/feedback/feedback",
-    "pages/logs/logs"
-    
+    "pages/release/release"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "喝什么",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "selectedColor": "#237804",
     "list": [
-      { "pagePath": "pages/index/index", "text": "首页", "iconPath": "", "selectedIconPath": ""},
-      { "pagePath": "pages/content/content", "text": "攻略"},
-      { "pagePath": "pages/about/about", "text": "关于"}
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon/主页_1.png",
+        "selectedIconPath": "/images/icon/主页.png"
+      },
+      {
+        "pagePath": "pages/strategy/strategy",
+        "text": "攻略",
+        "iconPath": "/images/icon/攻略_1.png",
+        "selectedIconPath": "/images/icon/攻略.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "/images/icon/关于_1.png",
+        "selectedIconPath": "/images/icon/关于.png"
+      }
     ]
   }
 }

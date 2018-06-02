@@ -6,18 +6,19 @@
   top: 0;
   left: 0;
   background: #000;
-  opacity: 0.5;
+  opacity: 0.7;
   overflow: hidden;
   z-index: 9000;
   color: #fff;
 }
 
 .card-dialog {
-  width: 540rpx;
+  width: 600rpx;
+  height: 900rpx;
   overflow: hidden;
   position: fixed;
-  top: 15%;
-  left: 13%;
+  top: 100rpx;
+  left: 75rpx;
   z-index: 9999;
   background: #f9f9f9;
   border-radius: 36rpx;
@@ -27,15 +28,20 @@
 }
 
 .card-title {
-  padding-top: 50rpx;
+  padding: 20rpx;
   font-size: 36rpx;
-  color: #030303;
+  color: #237804;
   text-align: center;
 }
 
-.card-content {
-  padding: 50rpx 32rpx;
-}
-.card-content image{
+.card-image{
   width: 420rpx;
+  margin-left: 90rpx;
+}
+
+.card-description{
+  padding: 20rpx;
+  font-size: 30rpx;
+  display: inline-block;
+  color: #95de64;
 }

@@ -1,24 +1,20 @@
 <!--index.wxml-->
 <view class="container">
-  <!--
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class='userinfi-nickname'> {{userInfo.nickName}} </text>
-    </block>
-  </view>
-  -->
-  <view> 今日推荐 </view>
-  <view><image class='img-recommend' src='/images/cf-dalishi.png'></image></view>
-  <view class='btns-recommend'>
-    <button> 换一个 </button>
-    <button> 了解推荐 </button>
-  </view>
-  <text class='coffee-saying'>woshizhuangbiyuluwoshizhuangbiyuluwoshizhuangbiyuluwoshi</text>
+  <view class='img-recommend'  bindtap='tapShowCard'><image mode='aspectFit' src='{{recommendProduct.picUrl}}'></image></view>
+  <view class='btns-recommend' bindtap='tapShowCard'> {{recommendProduct.name}}({{recommendProduct.enName}}) </view>
+  <text class='coffee-saying' bindtap='tapShowCard'>{{sd}}</text>
+
+  <card isHidden='{{!isShowCard}}' content='{{recommendProduct}}' />
 
   <view class="bottom-container">
-    <view> 网友推荐 </view>
+    <view class='bottom-block' bindtap='navRelease' > 
+      <image src='/images/icon/share.png'></image>
+      我要分享
+    </view>
+    <view class='bottom-block' bindtap='navStrategy' >
+      <image src='/images/icon/strategy.png'></image>
+      网红攻略
+    </view>
   </view>
 
 </view>

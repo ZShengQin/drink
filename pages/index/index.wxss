@@ -1,21 +1,29 @@
 /**index.wxss**/
 
 .img-recommend{
-  width: 450rpx;
-  height: 550rpx;
+  
+}
+.img-recommend image{
+  width: 550rpx;
+  margin: 50rpx 0;
 }
 .btns-recommend{
-  width: 60%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
+  text-decoration: underline;
+  margin-bottom: 20rpx;
+  font-size: 38rpx;
+  color: #597ef7;
 }
 
 .coffee-saying{
   width: 80%;
-  background-color: lightblue;
   word-break: break-all;
+  font-size: 35rpx;
+  color: #adc6ff;
+  margin-bottom: 50rpx;
 }
 
 .bottom-container{
@@ -25,4 +33,14 @@
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
+}
+.bottom-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottom-block image{
+  width: 80rpx;
+  height: 85rpx;
+  margin-bottom: 20rpx;
 }

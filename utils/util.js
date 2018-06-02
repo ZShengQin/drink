@@ -15,24 +15,34 @@ const formatNumber = n => {
 }
 
 /**
- * 将index值转换为url中对应字符串
+ * 休眠
+ * @pram sleepTime: 休眠的时间，毫秒
  */
-const convertIndexToString = index => {
-  switch (index) {
-    case 0:
-      return '/coffee'
-    case 1:
-      return '/yidiandian'
-    case 2:
-      return '/heytea'
-    case 3:
-      return '/more'
-    default:
-      return '/coffee'
+const sleep = sleepTime => {
+  let now = new Date();
+  let exitTime = now.getTime() + sleepTime;
+  while (true) {
+    now = new Date();
+    if (now.getTime() > exitTime) {
+      return;
+    }
   }
+}
+
+/**
+ * 检测是否可以提交分享
+ */
+const disableBtn = function(){
+  for(let i = 0; i < arguments.length; i++){
+    if(!arguments[i]){
+      return true;
+    }
+  }
+  return false;
 }
 
 module.exports = {
   formatTime: formatTime,
-  convertIndexToString: convertIndexToString
+  sleep: sleep,
+  disableBtn: disableBtn
 }

@@ -1,0 +1,71 @@
+<!--pages/release/release.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">我要分享</view>
+    <view class="page__desc">分享我的搭配攻略</view>
+  </view>
+  <view class="page__bd">
+  
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">名称</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入饮料名称" value='{{name}}' bindblur='typedName' />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input weui-cell_vcode">
+        <view class="weui-cell__hd">
+          <view class="weui-label">搭配</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入搭配攻略" value='{{strategy}}' bindblur='typedStrategy' />
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">我的评价</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" maxlength='200' placeholder="随便说两句吧.." value='{{description}}' 
+            style="height: 10em" bindinput='typingDescription' bindblur='typedDescription' />
+          <view class="weui-textarea-counter">{{length}}/200</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+
+            <view class="weui-uploader__hd">
+              <view class="weui-uploader__title"> 上传一张美图 </view>
+            </view>
+            <!--实际只允许上传一张-->
+            <block wx:for="{{files}}" wx:key="*this">
+              <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+              </view>
+            </block>
+            <view wx:if='{{!files.length}}' class="weui-uploader__bd">
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__tips">让更多咖啡奶茶控看到你的精彩分享</view>
+
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="submitShare" disabled='{{disabledSubmit}}'>分享</button>
+    </view>
+
+  </view>
+</view>

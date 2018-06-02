@@ -1,4 +1,6 @@
 // pages/feedback/feedback.js
+const Api = require('../../global/API.js')
+const Util = require('../../utils/util.js')
 const app = getApp()
 
 Page({
@@ -43,7 +45,7 @@ Page({
       })
     } else {
       wx.request({
-        url: app.globalData.API + '/feedback',
+        url: Api.DOMAIN + '/feedback',
         method: 'POST',
         header: {
           'content-type': 'application/x-www-form-urlencoded'
@@ -54,20 +56,23 @@ Page({
         },
         success: res => {
           console.log(res)
-          if(res.data.code == API.SUCCESS){
+          if(res.data.code == Api.SUCCESS){
             wx.showToast({
               title: '反馈成功',
             }) 
 
             //停留一秒让用户看到反馈成功的提示后返回主界面
-            SettingUtil.sleep(1000)
+            Util.sleep(1000)
 
             wx.reLaunch({
               url: '../index/index',
             })
+            
           } else{
-            wx.showToast({
-              title: '反馈失败，请重新尝试',
+            wx.showModal({
+              title: '未知错误',
+              content: '反馈失败，请重新尝试',
+              showCancel: false
             })
           } 
         },

@@ -2,7 +2,7 @@
 <view class='prolist'>  
   <view wx:for="{{proList}}" wx:key="{{index}}">
     <view class='prolist-item' bindtap='tapShowCard' data-index='{{index}}'>
-      <view><image class='prolist-item-img' src='{{item.picUrl}}'></image></view>
+      <view class='prolist-item-img'><image src='{{item.picUrl}}'></image></view>
       <view class='prolist-item-content'>
         <view class='item-name'>{{item.name}}</view>
         <view>{{item.strategy}}</view>

@@ -5,11 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    email: '',
-    qq: ''
+    contacts: [
+      { 
+        nickname: 'Qin',
+        firstName: 'Zhang', 
+        email: 'shengqin_zhang@outlook.com',
+        qq: '1309075777' 
+      },
+      {
+        nickname: 'Bear', 
+        firstName: 'Xiong', 
+        email: '',
+        qq: '' 
+      }
+    ]
   },
 
-  copyContent: e => {
+  copyContent: function(e) {
     wx.setClipboardData({
       data: e.currentTarget.dataset.content,
       success: () => {
@@ -27,7 +39,7 @@ Page({
     
   },
 
-  userFeedback: () => {
+  userFeedback: function(e) {
     wx.navigateTo({
       url: '../feedback/feedback',
     })

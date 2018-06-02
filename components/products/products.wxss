@@ -10,10 +10,11 @@
   display: flex;
   flex-flow: row nowrap;
 }
-.prolist-item-img{
-  width: 170rpx;
+.prolist-item-img image{
+  width: 150rpx;
   height: 170rpx;
   display: inline-block;
+  margin-right: 15rpx;
 }
 .prolist-item-content{
   display: flex;
