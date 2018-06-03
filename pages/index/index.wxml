@@ -2,7 +2,7 @@
 <view class="container">
   <view class='img-recommend'  bindtap='tapShowCard'><image mode='aspectFit' src='{{recommendProduct.picUrl}}'></image></view>
   <view class='btns-recommend' bindtap='tapShowCard'> {{recommendProduct.name}}({{recommendProduct.enName}}) </view>
-  <text class='coffee-saying' bindtap='tapShowCard'>{{sd}}</text>
+  <text class='coffee-saying' bindtap='tapShowCard'>{{saying}}</text>
 
   <card isHidden='{{!isShowCard}}' content='{{recommendProduct}}' />
 

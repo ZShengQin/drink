@@ -7,6 +7,10 @@ Component({
     menuList: {
       type: Array,
       value: []
+    },
+    activeIndex: {
+      type: Number,
+      value: 0
     }
   },
 
@@ -14,7 +18,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    
+    activeIndex: 0
   },
 
   /**
@@ -22,7 +26,11 @@ Component({
    */
   methods: {
     changeIndex: function(e){
+      this.setData({
+        activeIndex: e.currentTarget.dataset.index
+      })
       this.triggerEvent("changeleftindex", { activeLeftIndex: e.currentTarget.dataset.index })
     }
   }
+
 })

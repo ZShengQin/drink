@@ -3,6 +3,7 @@
 
 <scroll-view scroll-y class="card-dialog" wx:if="{{!isHidden}}" bindtap='hideCard' >
   <view class="card-title"> {{content.name}} </view>
-  <image mode='aspectFit' class="card-image" src='{{content.picUrl}}'></image>
+  <!--如果有设置大图 则显示大图picUrlX-->
+  <image mode='aspectFit' class="card-image" src='{{content.picUrlX ? content.picUrlX : content.picUrl}}'></image>
   <view><text class='card-description'> {{content.description}} </text></view>
 </scroll-view>

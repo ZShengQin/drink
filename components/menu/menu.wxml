@@ -2,6 +2,6 @@
 <!--左侧栏--> 
 <view class='left-menu'>
   <view wx:for="{{menuList}}">
-    <view class='menu-item' bindtap='changeIndex' data-index='{{index}}' >{{item}}</view>
+    <view class='menu-item {{(index==activeIndex) ? "active-menu-item" : ""}}' bindtap='changeIndex' data-index='{{index}}' >{{item}}</view>
   </view>
 </view>

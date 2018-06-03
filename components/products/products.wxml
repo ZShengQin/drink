@@ -1,5 +1,5 @@
 <!--components/products/products.wxml-->
-<view class='prolist'>  
+<scroll-view scroll-y class='prolist'>  
   <view wx:for="{{proList}}" wx:key="{{index}}">
     <view class='prolist-item' bindtap='tapShowCard' data-index='{{index}}'>
       <view class='prolist-item-img'><image src='{{item.picUrl}}'></image></view>
@@ -9,4 +9,4 @@
       </view>
     </view>
   </view>
-</view>
+</scroll-view>

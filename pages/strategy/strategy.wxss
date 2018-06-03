@@ -1,13 +1,11 @@
 /* pages/content/content.wxss */
 page,
-.page,
-.page__bd{
-    height: 100%;
+.page{
+  height: 100%;
 }
-.page__bd{
-    padding-bottom: 0;
-}
-.weui-tab__content{
-    padding-top: 60px;
-    text-align: center;
+
+.show-pro{
+  position: absolute;
+  left: 170rpx;
+  top: 105rpx;
 }

@@ -29,7 +29,7 @@ Component({
      * 无任何操作,只是为了截断蒙层touchmove
      * 开发工具上仍可滚动,真机上不会
      */
-    preventTouchMove: function(){
+    preventTouchMove(){
     },
     hideCard: function () {
       this.setData({

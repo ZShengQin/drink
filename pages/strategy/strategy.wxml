@@ -3,10 +3,10 @@
   <topnav tabs="{{tabs}}" active-index="{{activeIndex}}" slider-offset="{{sliderOffset}}" slider-left="{{sliderLeft}}" bindmytapclick="tapClick" />
 
   <!--通过topnav组件的tapClick事件回传的activeIndex决定渲染什么内容-->
-  <view class="weui-tab__panel">
-    <view class="">
-      <menu menu-list="{{menuList[activeIndex]}}" bindchangeleftindex="changeLeftIndex" />
-      <products pro-list="{{proList}}" bindtapshowcard="tapShowCard" />
+  <view>
+    <view class="content">
+      <menu class="left-menu" menu-list="{{menuList[activeIndex]}}" active-index="{{activeLeftIndex}}" bindchangeleftindex="changeLeftIndex" />
+      <products class="show-pro" pro-list="{{proList}}" bindtapshowcard="tapShowCard" />
     </view>
   </view>
 

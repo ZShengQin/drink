@@ -28,7 +28,8 @@ Page({
   tapClick: function (e) {
     const index = e.detail.activeIndex
     this.setData({
-      activeIndex: index
+      activeIndex: index,
+      activeLeftIndex: 0
     })
     //将index值转换为url中对应字符串
     if(index !== 2){
@@ -132,6 +133,12 @@ Page({
           }
         }
       })
+    }
+  },
+
+  onShareAppMessage: function () {
+    return {
+      title: '星巴克一点点攻略!'
     }
   }
  

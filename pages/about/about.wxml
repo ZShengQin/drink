@@ -21,13 +21,6 @@
           </view>
         </view>
 
-        <view class="weui-cell weui-cell_access" bindtap='copyContent' data-content='{{item.email}}'>
-          <view class="weui-cell__bd">
-            <view style="display: inline-block; vertical-align: middle">E-mail: {{item.email}}</view>
-          </view>
-          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-        </view>
-
         <view class="weui-cell weui-cell_access" bindtap='copyContent' data-content='{{item.qq}}'>
           <view class="weui-cell__bd">
             <view style="display: inline-block; vertical-align: middle">QQ: {{item.qq}}</view>

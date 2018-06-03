@@ -10,7 +10,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
 
     recommendProduct: {},
-    sd: '',
+    saying: '',
     isShowCard: false
   },
 
@@ -39,13 +39,28 @@ Page({
       url: Api.DOMAIN + '/recommend',
       success: res => {
         console.log(res)
-        let sd = res.data.description.substr(0, 29) + '...'
         this.setData({
           recommendProduct: res.data,
-          sd: sd
         })
       }
     })
+    wx.request({
+      url: Api.DOMAIN + '/saying',
+      success: res => {
+        this.setData({
+          saying: res.data.saying
+        })
+      }
+    })
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function(){
+    return {
+      title: '左手咖啡,右手生活'
+    }
   }
 
 })
