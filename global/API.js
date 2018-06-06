@@ -1,4 +1,4 @@
-const DOMAIN = 'https://www.sillycode.cn/competition'
+const DOMAIN = 'http://localhost:666'
 const SUCCESS = 0
 const SYSTEM_ERROR = -1
 const ENTER_ERROR = 100
