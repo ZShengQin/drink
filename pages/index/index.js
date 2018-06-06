@@ -5,9 +5,7 @@ const app = getApp()
 
 Page({
   data: {
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    refreshHidden: true,
 
     recommendProduct: {},
     saying: '',
@@ -42,16 +40,17 @@ Page({
         this.setData({
           recommendProduct: res.data,
         })
-      }
-    })
-    wx.request({
-      url: Api.DOMAIN + '/saying',
-      success: res => {
-        this.setData({
-          saying: res.data.saying
+        wx.request({
+          url: Api.DOMAIN + '/saying',
+          success: res => {
+            this.setData({
+              saying: res.data.saying
+            })
+          }
         })
       }
     })
+    
   },
 
   /**
@@ -61,6 +60,34 @@ Page({
     return {
       title: '左手咖啡,右手生活'
     }
+  },
+
+  /**
+   * 下拉刷新
+   */
+  onPullDownRefresh: function(){
+    this.setData({
+      refreshHidden: false
+    })
+    wx.request({
+      url: Api.DOMAIN + '/recommend',
+      success: res => {
+        console.log(res)
+        this.setData({
+          recommendProduct: res.data,
+        })
+        wx.request({
+          url: Api.DOMAIN + '/saying',
+          success: res => {
+            this.setData({
+              saying: res.data.saying,
+              refreshHidden: true
+            })
+          }
+        })
+      }
+    })
+    wx.stopPullDownRefresh()
   }
 
 })

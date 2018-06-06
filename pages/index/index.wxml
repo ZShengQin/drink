@@ -1,8 +1,16 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container index-page">
+
+   <view class="hot-box-top" hidden="{{refreshHidden}}">
+    <view class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在刷新....</view>
+    </view>
+   </view>
+
   <view class='img-recommend'  bindtap='tapShowCard'><image mode='aspectFit' src='{{recommendProduct.picUrl}}'></image></view>
-  <view class='btns-recommend' bindtap='tapShowCard'> {{recommendProduct.name}}({{recommendProduct.enName}}) </view>
-  <text class='coffee-saying' bindtap='tapShowCard'>{{saying}}</text>
+  <view class='btns-recommend' bindtap='tapShowCard'> {{recommendProduct.name}}({{recommendProduct.enName ? recommendProduct.enName : '加载失败 下拉刷新'}}) </view>
+  <text class='coffee-saying'>{{saying}}</text>
 
   <card isHidden='{{!isShowCard}}' content='{{recommendProduct}}' />
 

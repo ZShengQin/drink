@@ -1,4 +1,8 @@
 /**index.wxss**/
+.index-page{
+  height: 100vh;
+  background: linear-gradient(#ffffff, #e8e8e8);
+}
 
 .img-recommend image{
   width: 550rpx;
@@ -12,14 +16,15 @@
   text-decoration: underline;
   margin-bottom: 20rpx;
   font-size: 38rpx;
-  color: #177BE1;
+  color: #096dd9;
 }
 
 .coffee-saying{
   width: 85%;
   word-break: break-all;
   font-size: 35rpx;
-  color: #adc6ff;
+  color: #69c0ff;
+  border: 1px solid #f0f0f0;
 }
 
 .bottom-container{

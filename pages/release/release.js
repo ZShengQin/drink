@@ -96,30 +96,31 @@ Page({
             url: Api.DOMAIN + '/strategy/share/img',
             filePath: this.data.files[0],
             name: 'file',
+            header: {
+              "content-type": "application/json"
+            },
             success: res => {
               console.log(res)
-              if(res.data.code == 0){
-                //分享成功提示
-                wx.showToast({
-                  title: '分享成功',
-                })
-                //用户点击分享后将按钮disable掉,防止重复点击
-                this.setData({
-                  disabledSubmit: true
-                })
+              //分享成功提示
+              wx.showToast({
+                title: '分享成功',
+              })
+              //用户点击分享后将按钮disable掉,防止重复点击
+              this.setData({
+                disabledSubmit: true
+              })
 
-                //休眠1秒让用户看到提示
-                Util.sleep(1500)
+              //休眠1秒让用户看到提示
+              Util.sleep(1500)
 
-                wx.navigateBack({ })
-              }
+              wx.navigateBack({ })
             }
           })
 
         } else {
           wx.showModal({
             title: '未知错误',
-            content: '分享失败，请重新尝试',
+            content: '分享失败，请查看是否选择图片',
             showCancel: false
           })
         }

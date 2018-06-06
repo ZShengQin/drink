@@ -5,16 +5,17 @@
   left: 0;
   width: 150rpx;
   height: 100%;
-  background-color: #fafafa;
+  background: linear-gradient(#fafafa, #e8e8e8);
 }
 
 .menu-item{
   height: 150rpx;
   line-height: 150rpx;
-  border-bottom: 1px solid #ccc;
+
   text-align: center;
 }
 
 .active-menu-item{
   color: #5b8c00;
+  background-color: #fff;
 }

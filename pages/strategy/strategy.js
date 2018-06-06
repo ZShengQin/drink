@@ -38,7 +38,8 @@ Page({
         success: res => {
           console.log(res)
           this.setData({
-            proList: res.data
+            proList: res.data,
+            count: 0
           })
         }
       })
@@ -51,7 +52,7 @@ Page({
         success: res => {
           console.log(res)
           this.setData({
-            count: this.data.count++,
+            count: this.data.count + 1,
             proList: res.data
           })
         }
@@ -89,6 +90,10 @@ Page({
     console.log(this.data.cardContent)
   },
 
+  /**
+   * 获取屏幕宽度信息
+   * 获取默认展示数据
+   */
   onLoad: function () {
     wx.getSystemInfo({
       success: res => {
@@ -109,12 +114,11 @@ Page({
     })
   },
 
+  /**
+   * 触底刷新
+   */
   onReachBottom: function(){
     if(this.data.activeIndex == 2){
-      let count = this.data.count++
-      this.setData({
-        count: count
-      })
       wx.request({
         url: Api.DOMAIN + '/strategy/share',
         data: {
@@ -128,7 +132,8 @@ Page({
           } else {
             let proList = this.data.proList.concat(res.data)
             this.setData({
-              proList: proList
+              proList: proList,
+              count: this.data.count + 1
             })
           }
         }
